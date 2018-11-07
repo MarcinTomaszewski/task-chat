@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/index.html`);
 });
 
-io.on('conection', (socket) => {
+io.on('connection', (socket) => {
     // klient nasłuchuje na wiadomość wejścia do czatu
     socket.on('join', (name) => {
         // użytkownika, który pojawił się w aplikacji, zapisujemy do serwisu trzymającego listę osób w czacie
